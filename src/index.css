@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Russo+One&display=swap');
+
+:root {
+  --bg-color: #080808;
+  --accent-primary: #ff1a1a;
+  /* Rock Red */
+  --accent-secondary: #00e5ff;
+  /* Electric Cyan */
+  --accent-tertiary: #ffd700;
+  /* Gold */
+  --text-main: #f0f0f0;
+  --text-dim: #888888;
+
+  --lane-1: #00ff00;
+  /* Green */
+  --lane-2: #ff0000;
+  /* Red */
+  --lane-3: #ffff00;
+  /* Yellow */
+  --lane-4: #0000ff;
+  /* Blue */
+  --lane-5: #ff8800;
+  /* Orange */
+
+  --metal-bg: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+  --glass: rgba(0, 0, 0, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glow-intensity: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.glass-morphism {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+.neon-text-pink {
+  text-shadow: 0 0 var(--glow-intensity) var(--accent-primary);
+}
+
+.neon-text-cyan {
+  text-shadow: 0 0 var(--glow-intensity) var(--accent-secondary);
+}
+
+.neon-border-pink {
+  border: 1px solid var(--accent-primary);
+  box-shadow: 0 0 var(--glow-intensity) var(--accent-primary);
+}
+
+.neon-border-cyan {
+  border: 1px solid var(--accent-secondary);
+  box-shadow: 0 0 var(--glow-intensity) var(--accent-secondary);
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Custom Scrollbar for song selection if needed */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 10px;
+}
+
+.luxury-shadow {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-accent-secondary {
+  color: var(--accent-secondary);
+}
+
+.text-accent-primary {
+  color: var(--accent-primary);
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-accent-primary {
+  --tw-gradient-from: var(--accent-primary);
+  --tw-gradient-to: rgba(255, 26, 26, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-accent-tertiary {
+  --tw-gradient-to: var(--accent-tertiary);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.text-accent-tertiary {
+  color: var(--accent-tertiary);
+}
+
+.font-rock {
+  font-family: 'Russo One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.metallic-text {
+  background: linear-gradient(to bottom, #ffffff 0%, #aaaaaa 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+}
+
+.hero-button {
+  background: var(--metal-bg);
+  border: 2px solid var(--accent-secondary);
+  box-shadow: 0 0 15px var(--accent-secondary);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hero-button:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 30px var(--accent-secondary);
+  color: #fff;
+}
+
+input {
+  color: var(--text-main);
+}
+
+input::placeholder {
+  color: var(--text-dim);
+}
+
+
+@keyframes lightning {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  10%,
+  90% {
+    opacity: 0;
+  }
+
+  11% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.1;
+  }
+
+  13% {
+    opacity: 0.8;
+  }
+
+  14% {
+    opacity: 0;
+  }
+}
+
+.lightning-effect {
+  position: absolute;
+  inset: 0;
+  background: white;
+  pointer-events: none;
+  z-index: 50;
+  animation: lightning 5s infinite;
+}
