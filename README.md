@@ -1,16 +1,53 @@
-# React + Vite
+# Sitar Hero
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite web app for exploring sitar music, ragas, and interactive learning.
 
-Currently, two official plugins are available:
+## What This Does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Sitar Hero is a lightweight, interactive web application built with React 18 and Vite. It explores sitar music concepts, ragas, and provides an engaging frontend experience for music learners and enthusiasts.
 
-## React Compiler
+## Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Install dependencies
+npm install
 
-## Expanding the ESLint configuration
+# Run development server
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Open http://localhost:5173
+```
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+Static files are output to `dist/` and can be served with any static host.
+
+## Tech Stack
+
+- React 18
+- Vite
+- JavaScript/JSX
+- CSS Modules
+
+## Project Structure
+
+```
+src/
+  components/     # React components
+  assets/         # Images, audio, static files
+  App.jsx         # Main app entry
+  main.jsx        # Vite bootstrap
+public/           # Static public assets
+```
+
+## Status
+
+Prototype / demo stage. Built for exploration and learning.
+
+---
+
+*See [AGENTS.md](AGENTS.md) for agent collaboration notes.*
